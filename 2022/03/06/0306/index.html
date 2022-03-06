@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh:CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhangziyangblog.cn","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="前端代码规范如果你有去过大厂，或者说有过大厂相关的项目经历，相信你一定对代码规范有所了解。而作为大厂的前端，有一项是必须要做的事情，就是要遵守代码规范，并写出像诗一样的代码😁那么为什么大厂会这么会这么重视代码规范呢，其实答案很简单。通常代码的项目都很大，很多人并行开发，然而每个人的写代码的习惯都不一样，例如有的人习惯写注释，有的人却没有写注释的习惯，所以为了统一大家的代码风格，为了便于日后的代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端代码规范，学会了，你也能写出诗一样的代码！">
+<meta property="og:url" content="https://zhangziyangblog.cn/2022/03/06/0306/index.html">
+<meta property="og:site_name" content="章同学的blog">
+<meta property="og:description" content="前端代码规范如果你有去过大厂，或者说有过大厂相关的项目经历，相信你一定对代码规范有所了解。而作为大厂的前端，有一项是必须要做的事情，就是要遵守代码规范，并写出像诗一样的代码😁那么为什么大厂会这么会这么重视代码规范呢，其实答案很简单。通常代码的项目都很大，很多人并行开发，然而每个人的写代码的习惯都不一样，例如有的人习惯写注释，有的人却没有写注释的习惯，所以为了统一大家的代码风格，为了便于日后的代码">
+<meta property="og:locale">
+<meta property="og:image" content="https://zhangziyangblog.cn/images/tx.png">
+<meta property="og:image" content="https://zhangziyangblog.cn/images/jd.png">
+<meta property="og:image" content="https://zhangziyangblog.cn/images/bd.png">
+<meta property="og:image" content="https://zhangziyangblog.cn/images/vue.png">
+<meta property="og:image" content="https://zhangziyangblog.cn/images/eslint.png">
+<meta property="article:published_time" content="2022-03-06T10:55:30.000Z">
+<meta property="article:modified_time" content="2022-03-06T11:38:06.199Z">
+<meta property="article:author" content="章同学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhangziyangblog.cn/images/tx.png">
+
+<link rel="canonical" href="https://zhangziyangblog.cn/2022/03/06/0306/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh:CN'
+  };
+</script>
+
+  <title>前端代码规范，学会了，你也能写出诗一样的代码！ | 章同学的blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">章同学的blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录工作学习的点点滴滴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh:CN">
+    <link itemprop="mainEntityOfPage" href="https://zhangziyangblog.cn/2022/03/06/0306/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpeg">
+      <meta itemprop="name" content="章同学">
+      <meta itemprop="description" content="理想是人生的太阳！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="章同学的blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          前端代码规范，学会了，你也能写出诗一样的代码！
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-03-06 18:55:30 / Modified: 19:38:06" itemprop="dateCreated datePublished" datetime="2022-03-06T18:55:30+08:00">2022-03-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前端代码规范"><a href="#前端代码规范" class="headerlink" title="前端代码规范"></a>前端代码规范</h3><p>如果你有去过大厂，或者说有过大厂相关的项目经历，相信你一定对代码规范有所了解。而作为大厂的前端，有一项是必须要做的事情，就是要遵守代码规范，并写出像诗一样的代码😁<br>那么为什么大厂会这么会这么重视代码规范呢，其实答案很简单。通常代码的项目都很大，很多人并行开发，然而每个人的写代码的习惯都不一样，例如有的人习惯写注释，有的人却没有写注释的习惯，所以为了统一大家的代码风格，<br>为了便于日后的代码维护，所以制定一个统一的规范，以此来进行约束，代码规范自然就应运而生了。那么本片文章就结合自己的工作经历，来给大家介绍一下业内比较好的几个代码规范，准备好了么，Let’s go! 😏</p>
+<h3 id="腾讯代码规范"><a href="#腾讯代码规范" class="headerlink" title="腾讯代码规范"></a><a target="_blank" rel="noopener" href="https://tgideas.qq.com/index_tguide/nav.htm">腾讯代码规范</a></h3><p>包含内容也挺多的：<br>PC端专题：快速上手、文件目录、页面头部、通用title、通用foot、统计代码、兼容测试<br>移动端专题：快速上手、文件目录、页面头部、REM布局、通用foot、统计代码、分享组件、兼容要求<br>双端官网：快速上手、页面跳转<br><img src="/images/tx.png"> </p>
+<h3 id="京东凹凸实验室前端代码规范"><a href="#京东凹凸实验室前端代码规范" class="headerlink" title="京东凹凸实验室前端代码规范"></a><a target="_blank" rel="noopener" href="https://guide.aotu.io/">京东凹凸实验室前端代码规范</a></h3><p>HTML规范:<br>基于W3C、苹果开发者等官方文档，并结合团队日常业务需求以及团队在日常开发过程中总结提炼出的经验而约定。<br>图片规范:<br>了解各种图片格式特性，根据特性制定图片规范，包括但不限于图片的质量约定、图片引入方式、图片合并处理等。<br>CSS 规范:<br>统一团队 CSS 代码书写和 SASS 预编译语言的语法风格，提供常用媒体查询语句和浏览器私有属性引用，并从业务层面统一规范常用模块的引用。<br>命名规范:<br>从 “目录命名”、“图片命名”、“ClassName” 命名等层面约定规范团队的命名习惯，增强团队代码的可读性。<br>JavaScript 规范:<br>统一团队的 JS 语法风格和书写习惯，减少程序出错的概率，其中也包含了 ES6 的语法规范和最佳实践。<br><img src="/images/jd.png"> </p>
+<h3 id="百度前端代码规范"><a href="#百度前端代码规范" class="headerlink" title="百度前端代码规范"></a><a target="_blank" rel="noopener" href="https://github.com/ecomfe/spec/blob/master/javascript-style-guide.md">百度前端代码规范</a></h3><p>百度一直是一个相信代码可以改变世界的公司，也是中国大厂里面第一个把代码规范做成标准化的公司，所以他们的代码规范一直被模仿，值得学习！<br><img src="/images/bd.png"> </p>
+<h3 id="vue编码规范"><a href="#vue编码规范" class="headerlink" title="vue编码规范"></a><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/style-guide/index.html">vue编码规范</a></h3><p>作为一款国民前端框架，如果你所在的项目正好在使用vue,那么vue特有的代码风格指南可以关注下！<br><img src="/images/vue.png"> </p>
+<h3 id="ESLint"><a href="#ESLint" class="headerlink" title="ESLint"></a><a target="_blank" rel="noopener" href="https://eslint.bootcss.com/">ESLint</a></h3><p>目前绝大多数前端项目都会用到的 可组装的 JavaScrip t和 JSX 检查工具。<br>在我看来 ESLint 的核心可能就是其中包含的各种规则，这些规则大多为众多开发者经验的结晶：<br>*有的可以帮我们避免错误；<br>*有的可以帮我们写出最佳实践的代码；<br>*有的可以帮我们规范变量的使用方式；<br>*有的可以帮我们规范代码格式；<br>*有的可以帮我们更合适的使用新的语法.<br><img src="/images/eslint.png"><br>以上就是本文的全部内容，如果你目前所在的项目还没有建立完善的代码规范而恰巧又需要引入代码规范，那么本文所罗列的这些业界代码规范可以供你参考！</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83"><span class="nav-number">1.</span> <span class="nav-text">前端代码规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%85%BE%E8%AE%AF%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83"><span class="nav-number">2.</span> <span class="nav-text">腾讯代码规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%AC%E4%B8%9C%E5%87%B9%E5%87%B8%E5%AE%9E%E9%AA%8C%E5%AE%A4%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83"><span class="nav-number">3.</span> <span class="nav-text">京东凹凸实验室前端代码规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83"><span class="nav-number">4.</span> <span class="nav-text">百度前端代码规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83"><span class="nav-number">5.</span> <span class="nav-text">vue编码规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ESLint"><span class="nav-number">6.</span> <span class="nav-text">ESLint</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="章同学"
+      src="/images/header.jpeg">
+  <p class="site-author-name" itemprop="name">章同学</p>
+  <div class="site-description" itemprop="description">理想是人生的太阳！</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">章同学</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
