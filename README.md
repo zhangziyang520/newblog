@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="120" src="https://wx1.sinaimg.cn/mw2000/005C4n1xgy1h25m9fajd3j30xc0xcq8a.jpg">
+  <img width="120" border-radius="50%" src="https://wx1.sinaimg.cn/mw2000/005C4n1xgy1h25m9fajd3j30xc0xcq8a.jpg">
 </p>
 
 <p align="center">
