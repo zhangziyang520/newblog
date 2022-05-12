@@ -8,7 +8,7 @@ const searchThirdparty = require('./themeConfig/searchThirdparty.js');
 // 主题配置
 module.exports = {
   author: "小章",
-  authorAvatar: "/img/logo.png",
+  authorAvatar: "/img/tiger.png",
   slogan: 'just do it',
   homeBlogCfg: {
     category: '文章分类',
@@ -19,7 +19,7 @@ module.exports = {
     friendLinkNum: 5
   },
   lastupdateNum: 3, // 最近更新文章数量
-  logo: "/img/logo.png",
+  logo: "/img/tiger.png",
   type: "blog", // 已修改源码，默认就是博客
   search: true,
   searchMaxSuggestions: 100,

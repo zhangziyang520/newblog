@@ -63,7 +63,6 @@
 - [七天学会NodeJS](https://nqdeng.github.io/7-days-nodejs/#1) 算个入门教程吧，挺全面的
 - [若依后台管理框架](http://vue.ruoyi.vip/index) [若依官网](http://ruoyi.vip/) `vue后台系统`，感兴趣的可以了解下
 - [TypeScript 中文手册](https://typescript.bootcss.com/) 学习`TypeScript`必备
-- [小姐姐视频收集](https://github.com/wozuinbs/video) 学累了放松[点击](http://meinu.ml/)下，太卷了不好，友情提示`注意身后`。
 
 ### 5、React
 - [React高频面试题梳理，看看面试怎么答？（上）](https://mp.weixin.qq.com/s/W7CNGn-Qc8o0EQ3bIKAJBQ)

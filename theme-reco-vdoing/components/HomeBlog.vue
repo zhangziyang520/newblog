@@ -6,6 +6,8 @@
           <img v-if="recoShowModule && $frontmatter.heroImage"
             class="hero-img" alt="小章的学习基地"
             :src="$withBase($frontmatter.heroImage)"
+            style="border-radius: 50%
+            "
           />
         </ModuleTransition>
 
