@@ -4,7 +4,7 @@
       <div class="home-blog-hero">
         <ModuleTransition delay=".06">
           <img v-if="recoShowModule && $frontmatter.heroImage"
-            class="hero-img" alt="俊劫的学习基地"
+            class="hero-img" alt="小章的学习基地"
             :src="$withBase($frontmatter.heroImage)"
           />
         </ModuleTransition>

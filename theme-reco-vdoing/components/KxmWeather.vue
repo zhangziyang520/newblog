@@ -14,8 +14,8 @@
       <div class="weather-footer">
         <div class="tips">技术交流、内推、外包等欢迎加V进群</div>
         <div class="qrcode">
-          <img v-show="isWechat" :src="$withBase('/img/wechat.png')" alt="摸鱼群" height="250px">
-          <img v-show="!isWechat" :src="$withBase('/img/wechat.png')" alt="微信">
+          <img v-show="isWechat" :src="$withBase('/img/wechats.png')" alt="摸鱼群" height="250px">
+          <img v-show="!isWechat" :src="$withBase('/img/wechats.png')" alt="微信">
         </div>
         <div class="toggle-qrcode">
           <span class="toggle-1" :class="{'actived': isWechat}" @click="toggleQrcode(true)">摸鱼群</span>
