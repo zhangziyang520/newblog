@@ -1,9 +1,9 @@
 <p align="center">
-  <img width="120" src="https://alexwjj.github.io/img/logo.png">
+  <img width="120" src="https://wx1.sinaimg.cn/mw2000/005C4n1xgy1h25m9fajd3j30xc0xcq8a.jpg">
 </p>
 
 <p align="center">
-  <a href="https://alexwjj.github.io/">
+  <!-- <a href="https://alexwjj.github.io/">
     <img src="https://img.shields.io/badge/%E4%BF%8A%E5%8A%AB%E5%8D%9A%E5%AE%A2-5.0-blue" alt="blog">
   </a>
   <a href="https://alexwjj.github.io/">
@@ -11,7 +11,7 @@
   </a>
   <a href="https://alexwjj.github.io/">
     <img src="https://img.shields.io/github/forks/alexwjj/alexwjj.github.io" alt="fork">
-  </a>
+  </a> -->
   <a href="https://vuepress-theme-reco.recoluan.com/">
     <img src="https://img.shields.io/badge/vuepress--theme--reco-1.x-blue" alt="vuepress-theme-reco">
   </a>
@@ -20,16 +20,16 @@
   </a>
 </p>
 
-![](https://alexwjj.github.io/img/blog-index.webp)
+<!-- ![](https://alexwjj.github.io/img/blog-index.webp) -->
 ## 关于我
 
-[关于我 - 图文介绍](https://alexwjj.github.io/bookshop/linkme/)
+<!-- [关于我 - 图文介绍](https://alexwjj.github.io/bookshop/linkme/) -->
 
 <!-- ## 关注我
 ![wxgzh](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/35e5fb5f6e654ba88d9b6c860ff859e4~tplv-k3u1fbpfcp-watermark.image) -->
 
 ## blog 4.0
-请切换分支：[20210501_blog_4.0](https://github.com/alexwjj/alexwjj.github.io/tree/20210501_blog_4.0)。当前博客5.0，2021.5.1上线。
+<!-- 请切换分支：[20210501_blog_4.0](https://github.com/alexwjj/alexwjj.github.io/tree/20210501_blog_4.0)。当前博客5.0，2021.5.1上线。 -->
 ## 资源分享(持续更新)
 ### 1、博客
 - [阮一峰的个人网站](http://www.ruanyifeng.com/home.html)  持续更新，没事就去看看，阮大的风格就是`很容易看懂`
