@@ -36,8 +36,8 @@
 - [字节飞书的学习计划 - 超清楚（必看）](https://bitable.feishu.cn/appNuDKPaGtimrdkB0JnXmpoktZ) 字节前端知识梳理，很清楚，`建议收藏`
 - [冴羽的博客](https://github.com/mqyqingfeng/Blog) 淘宝大神总结的`前端基础`
 - [Gridea](https://gridea.dev/) Gridea 是一个`静态博客`写作客户端，帮助你更容易地构建并管理博客或任何静态站点
-- [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/) 一款简洁而优雅的 vuepress 博客 & 文档 主题。我的[个人博客](https://alexwjj.github.io/)基于这个搭建的，有兴趣的可以了解下,博客也有`搭建教程`
-- [前端知识每日3+1](http://www.h-camel.com/index.html) 学习大佬的姿态，我也搞了个`每日学习打卡`，各位大哥可以搞起来 （[小章的个人博客](https://alexwjj.github.io/)）
+- [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/) 一款简洁而优雅的 vuepress 博客 & 文档 主题。我的[个人博客](https://zhangziyang520.github.io/newblog)基于这个搭建的，有兴趣的可以了解下,博客也有`搭建教程`
+- [前端知识每日3+1](http://www.h-camel.com/index.html) 学习大佬的姿态，我也搞了个`每日学习打卡`，各位大哥可以搞起来 （[小章的个人博客](https://zhangziyang520.github.io/newblog)）
 - [有赞技术团队](https://tech.youzan.com/)  `干货满满`
 
 ### 2、社区
