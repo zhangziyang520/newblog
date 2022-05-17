@@ -46,15 +46,17 @@ module.exports = [
         text: '联系',
         items: [
           { text: 'GitHub', link: 'https://github.com/zhangziyang520', icon: 'reco-github' },
-          { text: '关于我', link: '/bookshop/linkme/', icon: 'reco-account' },
+          // { text: '关于我', link: '/bookshop/linkme/', icon: 'reco-account' },
         ]
-      },{
-        text: '博客',
-        items: [
-          { text: '本站源码', link: 'https://github.com/zhangziyang520/newblog', icon: 'reco-document' },
-          { text: '老版博客', link: 'https://zhangziyang520.github.io/', icon: 'reco-document' },
-        ]
-      },{
+      },
+      // {
+      //   text: '博客',
+      //   items: [
+      //     { text: '本站源码', link: 'https://github.com/zhangziyang520/newblog', icon: 'reco-document' },
+      //     { text: '老版博客', link: 'https://zhangziyang520.github.io/', icon: 'reco-document' },
+      //   ]
+      // },
+      {
         text: '其他',
         items: [
           { text: '友情链接', link: '/bookshop/friendslink/', icon: 'reco-friend' },
