@@ -3,15 +3,6 @@
 </p>
 
 <p align="center">
-  <!-- <a href="https://alexwjj.github.io/">
-    <img src="https://img.shields.io/badge/%E4%BF%8A%E5%8A%AB%E5%8D%9A%E5%AE%A2-5.0-blue" alt="blog">
-  </a>
-  <a href="https://alexwjj.github.io/">
-    <img src="https://img.shields.io/github/stars/alexwjj/alexwjj.github.io" alt="start">
-  </a>
-  <a href="https://alexwjj.github.io/">
-    <img src="https://img.shields.io/github/forks/alexwjj/alexwjj.github.io" alt="fork">
-  </a> -->
   <a href="https://vuepress-theme-reco.recoluan.com/">
     <img src="https://img.shields.io/badge/vuepress--theme--reco-1.x-blue" alt="vuepress-theme-reco">
   </a>
@@ -20,7 +11,6 @@
   </a>
 </p>
 
-<!-- ![](https://alexwjj.github.io/img/blog-index.webp) -->
 ## 资源分享(持续更新)
 ### 1、博客
 - [阮一峰的个人网站](http://www.ruanyifeng.com/home.html)  持续更新，没事就去看看，阮大的风格就是`很容易看懂`
